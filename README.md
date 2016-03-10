@@ -10,8 +10,9 @@
 
 README-jslib.txt 是 JavaScript Lib 文档 
 
-### HTTPS/HTTP
-点触javascript 库自动支持全站https，不过因为安全设置的原因，点触的服务端并不支持 ie6 内核的浏览器使用 https 协议
+##### HTTPS/HTTP
+点触javascript 库自动支持全站https<br/>
+SSL版本是 TLS 1.2 ，所以点触的服务端并不支持 ie6 内核的浏览器使用 https 协议
 
 # 联系我们
 
