@@ -1,0 +1,9 @@
+[2016-05-18 15:38:33.272] [DEBUG] touclick - http://sverify-5-1-0.touclick.com/sverify.touclick?
+[2016-05-18 15:39:26.591] [DEBUG] touclick - http://sverify-5-1-0.touclick.com/sverify.touclick?
+[2016-05-18 15:51:25.473] [DEBUG] touclick - http://sverify-5-1-0.touclick.com/sverify.touclick?
+[2016-05-18 15:51:27.947] [DEBUG] touclick - response.statusCode:200	body:{"code":2,"message":"公钥不可为空","timestamp":1463557887967,"sign":""}
+[2016-05-18 15:51:27.947] [WARN] touclick - { code: 2, message: '公钥不可为空', timestamp: 1463557887967, sign: '' }
+[2016-05-18 15:52:28.998] [DEBUG] touclick - http://sverify-5-1-0.touclick.com/sverify.touclick?
+[2016-05-18 15:52:29.125] [DEBUG] touclick - response.statusCode:200	body:{"code":0,"message":"验证成功","timestamp":1463557949129,"sign":"5bec8e1281f90fb33200e1aee57ef912"}
+
+[2016-05-18 15:52:29.126] [DEBUG] touclick - 5bec8e1281f90fb33200e1aee57ef912

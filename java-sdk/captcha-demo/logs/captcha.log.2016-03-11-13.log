@@ -1,0 +1,1343 @@
+2016-03-11 01:00:50 [qtp606502806-19] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:00:50 [qtp606502806-19] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 - 页面不存在</title>
+</head>
+
+<body>
+	<h2>404 - 页面不存在.</h2>
+	<p><a href="/verify/;jsessionid=A436A3D922443E485B310D348766CF15">返回首页</a></p>
+</body>
+</html>; line: 6, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:00:52 [qtp606502806-21] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:00:52 [qtp606502806-21] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 - 页面不存在</title>
+</head>
+
+<body>
+	<h2>404 - 页面不存在.</h2>
+	<p><a href="/verify/;jsessionid=688AAE53C5561A28B9862FD740D54422">返回首页</a></p>
+</body>
+</html>; line: 6, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:00:54 [qtp606502806-17] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:00:54 [qtp606502806-17] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 - 页面不存在</title>
+</head>
+
+<body>
+	<h2>404 - 页面不存在.</h2>
+	<p><a href="/verify/;jsessionid=59080DF936BD48BDFFCA2ADD7CBE4729">返回首页</a></p>
+</body>
+</html>; line: 6, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:01:59 [qtp606502806-22] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:01:59 [qtp606502806-22] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 - 页面不存在</title>
+</head>
+
+<body>
+	<h2>404 - 页面不存在.</h2>
+	<p><a href="/verify/;jsessionid=06C65B84FC74EC8AEE793C8D6A6BF450">返回首页</a></p>
+</body>
+</html>; line: 6, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:02:00 [qtp606502806-19] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:02:00 [qtp606502806-19] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 - 页面不存在</title>
+</head>
+
+<body>
+	<h2>404 - 页面不存在.</h2>
+	<p><a href="/verify/;jsessionid=42373E76A03AE6E1F71EDA686D71FEEF">返回首页</a></p>
+</body>
+</html>; line: 6, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:02:01 [qtp606502806-21] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:02:01 [qtp606502806-21] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 - 页面不存在</title>
+</head>
+
+<body>
+	<h2>404 - 页面不存在.</h2>
+	<p><a href="/verify/;jsessionid=01C51DC8BF5652D70F66916FAC1D69F7">返回首页</a></p>
+</body>
+</html>; line: 6, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:02:01 [qtp606502806-22] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:02:01 [qtp606502806-22] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 - 页面不存在</title>
+</head>
+
+<body>
+	<h2>404 - 页面不存在.</h2>
+	<p><a href="/verify/;jsessionid=D16786AD8A44BF34EA05BB7859448E78">返回首页</a></p>
+</body>
+</html>; line: 6, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:02:06 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 12:58:36 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:02:06 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e1d2c63: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@78a5c391
+2016-03-11 01:02:06 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing Root WebApplicationContext: startup date [Fri Mar 11 12:58:35 CST 2016]; root of context hierarchy
+2016-03-11 01:02:06 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@78a5c391: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:02:12 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:273) - Root WebApplicationContext: initialization started
+2016-03-11 01:02:13 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing Root WebApplicationContext: startup date [Fri Mar 11 13:02:13 CST 2016]; root of context hierarchy
+2016-03-11 01:02:13 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-03-11 01:02:13 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:231) - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-03-11 01:02:13 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:239) - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2016-03-11 01:02:13 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:02:13 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@167f3e42: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:host.name=zhanwei-ThinkPad-T450
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.version=1.7.0_79
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.vendor=Oracle Corporation
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.home=/home/zhanwei/usr/java/jdk1.7.0_79/jre
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.class.path=/home/zhanwei/maven/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.io.tmpdir=/tmp
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.compiler=<NA>
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.name=Linux
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.arch=amd64
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.version=3.16.0-62-generic
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.name=zhanwei
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.home=/home/zhanwei
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.dir=/home/zhanwei/workspace/captcha-demo
+2016-03-11 01:02:13 [main] INFO  org.apache.zookeeper.ZooKeeper (ZooKeeper.java:438) - Initiating client connection, connectString=192.168.2.246:2181 sessionTimeout=20000 watcher=com.renren.cluster.ClusterCommon$ZKConnWatcher@31e5eb16
+2016-03-11 01:02:13 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:975) - Opening socket connection to server 192.168.2.246/192.168.2.246:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-11 01:02:13 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:852) - Socket connection established to 192.168.2.246/192.168.2.246:2181, initiating session
+2016-03-11 01:02:14 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:1235) - Session establishment complete on server 192.168.2.246/192.168.2.246:2181, sessionid = 0x151f28653fdaa07, negotiated timeout = 20000
+2016-03-11 01:02:14 [main-EventThread] INFO  com.renren.cluster.ClusterCommon$ZKConnWatcher (ClusterCommon.java:112) - Successfully connected to ZK.
+2016-03-11 01:02:14 [main] INFO  com.renren.cluster.client.ClusterPools (ClusterPools.java:158) - Create Pool: 0:192.168.2.246:6379 slave:[]
+2016-03-11 01:02:14 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:313) - Root WebApplicationContext: initialization completed in 1176 ms
+2016-03-11 01:02:14 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:454) - FrameworkServlet 'springServlet': initialization started
+2016-03-11 01:02:14 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:02:14 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:02:14 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-mvc.xml]
+2016-03-11 01:02:14 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:02:14 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a6cc3d1: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@167f3e42
+2016-03-11 01:02:14 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:315) - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-03-11 01:02:14 [main] INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping (AbstractHandlerMethodMapping.java:179) - Mapped "{[/verify],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.touclick.captcha.TouclickController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-03-11 01:02:15 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:302) - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-03-11 01:02:15 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:473) - FrameworkServlet 'springServlet': initialization completed in 988 ms
+2016-03-11 01:02:47 [qtp1099216304-21] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:02:47 [qtp1099216304-21] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 - 页面不存在</title>
+</head>
+
+<body>
+	<h2>404 - 页面不存在.</h2>
+	<p><a href="/verify/;jsessionid=8FA224988257A31464DB6E4E86D385E3">返回首页</a></p>
+</body>
+</html>; line: 6, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:827)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:920)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:982)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:09:09 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:02:14 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:09:09 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a6cc3d1: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@167f3e42
+2016-03-11 01:09:09 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing Root WebApplicationContext: startup date [Fri Mar 11 13:02:13 CST 2016]; root of context hierarchy
+2016-03-11 01:09:09 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@167f3e42: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:09:18 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:273) - Root WebApplicationContext: initialization started
+2016-03-11 01:09:18 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing Root WebApplicationContext: startup date [Fri Mar 11 13:09:18 CST 2016]; root of context hierarchy
+2016-03-11 01:09:18 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-03-11 01:09:18 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:231) - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-03-11 01:09:18 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:239) - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2016-03-11 01:09:18 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:09:18 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2bcf1082: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:host.name=zhanwei-ThinkPad-T450
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.version=1.7.0_79
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.vendor=Oracle Corporation
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.home=/home/zhanwei/usr/java/jdk1.7.0_79/jre
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.class.path=/home/zhanwei/maven/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.io.tmpdir=/tmp
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.compiler=<NA>
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.name=Linux
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.arch=amd64
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.version=3.16.0-62-generic
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.name=zhanwei
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.home=/home/zhanwei
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.dir=/home/zhanwei/workspace/captcha-demo
+2016-03-11 01:09:18 [main] INFO  org.apache.zookeeper.ZooKeeper (ZooKeeper.java:438) - Initiating client connection, connectString=192.168.2.246:2181 sessionTimeout=20000 watcher=com.renren.cluster.ClusterCommon$ZKConnWatcher@54a359c6
+2016-03-11 01:09:18 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:975) - Opening socket connection to server 192.168.2.246/192.168.2.246:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-11 01:09:18 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:852) - Socket connection established to 192.168.2.246/192.168.2.246:2181, initiating session
+2016-03-11 01:09:18 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:1235) - Session establishment complete on server 192.168.2.246/192.168.2.246:2181, sessionid = 0x151f28653fdaa09, negotiated timeout = 20000
+2016-03-11 01:09:18 [main-EventThread] INFO  com.renren.cluster.ClusterCommon$ZKConnWatcher (ClusterCommon.java:112) - Successfully connected to ZK.
+2016-03-11 01:09:19 [main] INFO  com.renren.cluster.client.ClusterPools (ClusterPools.java:158) - Create Pool: 0:192.168.2.246:6379 slave:[]
+2016-03-11 01:09:19 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:313) - Root WebApplicationContext: initialization completed in 1057 ms
+2016-03-11 01:09:19 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:454) - FrameworkServlet 'springServlet': initialization started
+2016-03-11 01:09:19 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:09:19 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:09:19 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-mvc.xml]
+2016-03-11 01:09:19 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:09:19 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2be78cf6: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@2bcf1082
+2016-03-11 01:09:19 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:315) - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-03-11 01:09:20 [main] INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping (AbstractHandlerMethodMapping.java:179) - Mapped "{[/verify],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.touclick.captcha.TouclickController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-03-11 01:09:20 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:302) - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-03-11 01:09:20 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:473) - FrameworkServlet 'springServlet': initialization completed in 962 ms
+2016-03-11 01:11:39 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:09:19 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:11:39 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2be78cf6: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@2bcf1082
+2016-03-11 01:11:39 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing Root WebApplicationContext: startup date [Fri Mar 11 13:09:18 CST 2016]; root of context hierarchy
+2016-03-11 01:11:39 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2bcf1082: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:11:57 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:273) - Root WebApplicationContext: initialization started
+2016-03-11 01:11:58 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing Root WebApplicationContext: startup date [Fri Mar 11 13:11:58 CST 2016]; root of context hierarchy
+2016-03-11 01:11:58 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-03-11 01:11:58 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:231) - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-03-11 01:11:58 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:239) - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2016-03-11 01:11:58 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:11:59 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@56e3ab86: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:host.name=zhanwei-ThinkPad-T450
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.version=1.7.0_79
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.vendor=Oracle Corporation
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.home=/home/zhanwei/usr/java/jdk1.7.0_79/jre
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.class.path=/home/zhanwei/maven/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.io.tmpdir=/tmp
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.compiler=<NA>
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.name=Linux
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.arch=amd64
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.version=3.16.0-62-generic
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.name=zhanwei
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.home=/home/zhanwei
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.dir=/home/zhanwei/workspace/captcha-demo
+2016-03-11 01:11:59 [main] INFO  org.apache.zookeeper.ZooKeeper (ZooKeeper.java:438) - Initiating client connection, connectString=192.168.2.246:2181 sessionTimeout=20000 watcher=com.renren.cluster.ClusterCommon$ZKConnWatcher@5fe315d1
+2016-03-11 01:11:59 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:975) - Opening socket connection to server 192.168.2.246/192.168.2.246:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-11 01:11:59 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:852) - Socket connection established to 192.168.2.246/192.168.2.246:2181, initiating session
+2016-03-11 01:11:59 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:1235) - Session establishment complete on server 192.168.2.246/192.168.2.246:2181, sessionid = 0x151f28653fdaa0a, negotiated timeout = 20000
+2016-03-11 01:11:59 [main-EventThread] INFO  com.renren.cluster.ClusterCommon$ZKConnWatcher (ClusterCommon.java:112) - Successfully connected to ZK.
+2016-03-11 01:11:59 [main] INFO  com.renren.cluster.client.ClusterPools (ClusterPools.java:158) - Create Pool: 0:192.168.2.246:6379 slave:[]
+2016-03-11 01:11:59 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:313) - Root WebApplicationContext: initialization completed in 1545 ms
+2016-03-11 01:11:59 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:454) - FrameworkServlet 'springServlet': initialization started
+2016-03-11 01:11:59 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:11:59 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:11:59 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-mvc.xml]
+2016-03-11 01:12:00 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:12:00 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3bd22ff9: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@56e3ab86
+2016-03-11 01:12:00 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:315) - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-03-11 01:12:00 [main] INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping (AbstractHandlerMethodMapping.java:179) - Mapped "{[/verify],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.touclick.captcha.TouclickController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-03-11 01:12:01 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:302) - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-03-11 01:12:01 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:473) - FrameworkServlet 'springServlet': initialization completed in 1880 ms
+2016-03-11 01:12:26 [qtp1143289332-22] ERROR com.touclick.captcha.service.TouClick (TouClick.java:83) - 404:The URI requested is invalid or the resource requested, such as a user, does not exists.
+2016-03-11 01:14:13 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:11:59 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:14:13 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3bd22ff9: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@56e3ab86
+2016-03-11 01:14:13 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing Root WebApplicationContext: startup date [Fri Mar 11 13:11:58 CST 2016]; root of context hierarchy
+2016-03-11 01:14:13 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@56e3ab86: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:14:24 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:273) - Root WebApplicationContext: initialization started
+2016-03-11 01:14:24 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing Root WebApplicationContext: startup date [Fri Mar 11 13:14:24 CST 2016]; root of context hierarchy
+2016-03-11 01:14:24 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-03-11 01:14:24 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:231) - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-03-11 01:14:24 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:239) - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2016-03-11 01:14:25 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:14:25 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@288ef68c: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:host.name=zhanwei-ThinkPad-T450
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.version=1.7.0_79
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.vendor=Oracle Corporation
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.home=/home/zhanwei/usr/java/jdk1.7.0_79/jre
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.class.path=/home/zhanwei/maven/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.io.tmpdir=/tmp
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.compiler=<NA>
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.name=Linux
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.arch=amd64
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.version=3.16.0-62-generic
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.name=zhanwei
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.home=/home/zhanwei
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.dir=/home/zhanwei/workspace/captcha-demo
+2016-03-11 01:14:25 [main] INFO  org.apache.zookeeper.ZooKeeper (ZooKeeper.java:438) - Initiating client connection, connectString=192.168.2.246:2181 sessionTimeout=20000 watcher=com.renren.cluster.ClusterCommon$ZKConnWatcher@38134991
+2016-03-11 01:14:25 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:975) - Opening socket connection to server 192.168.2.246/192.168.2.246:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-11 01:14:25 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:852) - Socket connection established to 192.168.2.246/192.168.2.246:2181, initiating session
+2016-03-11 01:14:25 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:1235) - Session establishment complete on server 192.168.2.246/192.168.2.246:2181, sessionid = 0x151f28653fdaa0b, negotiated timeout = 20000
+2016-03-11 01:14:25 [main-EventThread] INFO  com.renren.cluster.ClusterCommon$ZKConnWatcher (ClusterCommon.java:112) - Successfully connected to ZK.
+2016-03-11 01:14:25 [main] INFO  com.renren.cluster.client.ClusterPools (ClusterPools.java:158) - Create Pool: 0:192.168.2.246:6379 slave:[]
+2016-03-11 01:14:25 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:313) - Root WebApplicationContext: initialization completed in 1552 ms
+2016-03-11 01:14:26 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:454) - FrameworkServlet 'springServlet': initialization started
+2016-03-11 01:14:26 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:14:26 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:14:26 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-mvc.xml]
+2016-03-11 01:14:26 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:14:26 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8eea465: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@288ef68c
+2016-03-11 01:14:26 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:315) - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-03-11 01:14:26 [main] INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping (AbstractHandlerMethodMapping.java:179) - Mapped "{[/verify],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.touclick.captcha.TouclickController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-03-11 01:14:27 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:302) - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-03-11 01:14:27 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:473) - FrameworkServlet 'springServlet': initialization completed in 1418 ms
+2016-03-11 01:17:16 [qtp1369577113-18] ERROR com.touclick.captcha.service.TouClick (TouClick.java:83) - 404:The URI requested is invalid or the resource requested, such as a user, does not exists.
+2016-03-11 01:18:48 [qtp1369577113-17] ERROR com.touclick.captcha.service.TouClick (TouClick.java:83) - 404:The URI requested is invalid or the resource requested, such as a user, does not exists.
+2016-03-11 01:18:53 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:14:26 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:18:53 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@8eea465: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@288ef68c
+2016-03-11 01:18:53 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing Root WebApplicationContext: startup date [Fri Mar 11 13:14:24 CST 2016]; root of context hierarchy
+2016-03-11 01:18:53 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@288ef68c: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:19:00 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:273) - Root WebApplicationContext: initialization started
+2016-03-11 01:19:00 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing Root WebApplicationContext: startup date [Fri Mar 11 13:19:00 CST 2016]; root of context hierarchy
+2016-03-11 01:19:00 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-03-11 01:19:00 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:231) - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-03-11 01:19:00 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:239) - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2016-03-11 01:19:00 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:19:01 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a03a539: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:host.name=zhanwei-ThinkPad-T450
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.version=1.7.0_79
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.vendor=Oracle Corporation
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.home=/home/zhanwei/usr/java/jdk1.7.0_79/jre
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.class.path=/home/zhanwei/maven/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.io.tmpdir=/tmp
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.compiler=<NA>
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.name=Linux
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.arch=amd64
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.version=3.16.0-62-generic
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.name=zhanwei
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.home=/home/zhanwei
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.dir=/home/zhanwei/workspace/captcha-demo
+2016-03-11 01:19:01 [main] INFO  org.apache.zookeeper.ZooKeeper (ZooKeeper.java:438) - Initiating client connection, connectString=192.168.2.246:2181 sessionTimeout=20000 watcher=com.renren.cluster.ClusterCommon$ZKConnWatcher@29301a2f
+2016-03-11 01:19:01 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:975) - Opening socket connection to server 192.168.2.246/192.168.2.246:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-11 01:19:01 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:852) - Socket connection established to 192.168.2.246/192.168.2.246:2181, initiating session
+2016-03-11 01:19:01 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:1235) - Session establishment complete on server 192.168.2.246/192.168.2.246:2181, sessionid = 0x151f28653fdaa0e, negotiated timeout = 20000
+2016-03-11 01:19:01 [main-EventThread] INFO  com.renren.cluster.ClusterCommon$ZKConnWatcher (ClusterCommon.java:112) - Successfully connected to ZK.
+2016-03-11 01:19:01 [main] INFO  com.renren.cluster.client.ClusterPools (ClusterPools.java:158) - Create Pool: 0:192.168.2.246:6379 slave:[]
+2016-03-11 01:19:01 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:313) - Root WebApplicationContext: initialization completed in 888 ms
+2016-03-11 01:19:01 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:454) - FrameworkServlet 'springServlet': initialization started
+2016-03-11 01:19:01 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:19:01 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:19:01 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-mvc.xml]
+2016-03-11 01:19:01 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:19:01 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@308e44de: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@6a03a539
+2016-03-11 01:19:01 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:315) - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-03-11 01:19:01 [main] INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping (AbstractHandlerMethodMapping.java:179) - Mapped "{[/verify],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.touclick.captcha.TouclickController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-03-11 01:19:02 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:302) - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-03-11 01:19:02 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:473) - FrameworkServlet 'springServlet': initialization completed in 1005 ms
+2016-03-11 01:20:30 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:19:01 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:20:30 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@308e44de: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@6a03a539
+2016-03-11 01:20:31 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing Root WebApplicationContext: startup date [Fri Mar 11 13:19:00 CST 2016]; root of context hierarchy
+2016-03-11 01:20:31 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6a03a539: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:20:37 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:273) - Root WebApplicationContext: initialization started
+2016-03-11 01:20:37 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing Root WebApplicationContext: startup date [Fri Mar 11 13:20:37 CST 2016]; root of context hierarchy
+2016-03-11 01:20:37 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-03-11 01:20:37 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:231) - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-03-11 01:20:37 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:239) - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2016-03-11 01:20:37 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:20:38 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@39823684: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:host.name=zhanwei-ThinkPad-T450
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.version=1.7.0_79
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.vendor=Oracle Corporation
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.home=/home/zhanwei/usr/java/jdk1.7.0_79/jre
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.class.path=/home/zhanwei/maven/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.io.tmpdir=/tmp
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.compiler=<NA>
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.name=Linux
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.arch=amd64
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.version=3.16.0-62-generic
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.name=zhanwei
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.home=/home/zhanwei
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.dir=/home/zhanwei/workspace/captcha-demo
+2016-03-11 01:20:38 [main] INFO  org.apache.zookeeper.ZooKeeper (ZooKeeper.java:438) - Initiating client connection, connectString=192.168.2.246:2181 sessionTimeout=20000 watcher=com.renren.cluster.ClusterCommon$ZKConnWatcher@5a7ba8d4
+2016-03-11 01:20:38 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:975) - Opening socket connection to server 192.168.2.246/192.168.2.246:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-11 01:20:38 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:852) - Socket connection established to 192.168.2.246/192.168.2.246:2181, initiating session
+2016-03-11 01:20:38 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:1235) - Session establishment complete on server 192.168.2.246/192.168.2.246:2181, sessionid = 0x151f28653fdaa0f, negotiated timeout = 20000
+2016-03-11 01:20:38 [main-EventThread] INFO  com.renren.cluster.ClusterCommon$ZKConnWatcher (ClusterCommon.java:112) - Successfully connected to ZK.
+2016-03-11 01:20:38 [main] INFO  com.renren.cluster.client.ClusterPools (ClusterPools.java:158) - Create Pool: 0:192.168.2.246:6379 slave:[]
+2016-03-11 01:20:38 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:313) - Root WebApplicationContext: initialization completed in 1074 ms
+2016-03-11 01:20:38 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:454) - FrameworkServlet 'springServlet': initialization started
+2016-03-11 01:20:38 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:20:38 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:20:38 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-mvc.xml]
+2016-03-11 01:20:38 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:20:38 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e1d2c63: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@39823684
+2016-03-11 01:20:38 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:315) - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-03-11 01:20:39 [main] INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping (AbstractHandlerMethodMapping.java:179) - Mapped "{[/verify],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.touclick.captcha.TouclickController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-03-11 01:20:39 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:302) - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-03-11 01:20:39 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:473) - FrameworkServlet 'springServlet': initialization completed in 861 ms
+2016-03-11 01:20:49 [qtp639828086-22] ERROR com.touclick.captcha.service.TouClick (TouClick.java:83) - 404:The URI requested is invalid or the resource requested, such as a user, does not exists.
+2016-03-11 01:21:17 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:20:38 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:21:17 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e1d2c63: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@39823684
+2016-03-11 01:21:17 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing Root WebApplicationContext: startup date [Fri Mar 11 13:20:37 CST 2016]; root of context hierarchy
+2016-03-11 01:21:17 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@39823684: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:21:24 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:273) - Root WebApplicationContext: initialization started
+2016-03-11 01:21:24 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing Root WebApplicationContext: startup date [Fri Mar 11 13:21:24 CST 2016]; root of context hierarchy
+2016-03-11 01:21:24 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-03-11 01:21:24 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:231) - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-03-11 01:21:24 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:239) - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2016-03-11 01:21:24 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:21:24 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c55252c: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:host.name=zhanwei-ThinkPad-T450
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.version=1.7.0_79
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.vendor=Oracle Corporation
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.home=/home/zhanwei/usr/java/jdk1.7.0_79/jre
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.class.path=/home/zhanwei/maven/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.io.tmpdir=/tmp
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.compiler=<NA>
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.name=Linux
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.arch=amd64
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.version=3.16.0-62-generic
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.name=zhanwei
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.home=/home/zhanwei
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.dir=/home/zhanwei/workspace/captcha-demo
+2016-03-11 01:21:24 [main] INFO  org.apache.zookeeper.ZooKeeper (ZooKeeper.java:438) - Initiating client connection, connectString=192.168.2.246:2181 sessionTimeout=20000 watcher=com.renren.cluster.ClusterCommon$ZKConnWatcher@5efc1330
+2016-03-11 01:21:24 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:975) - Opening socket connection to server 192.168.2.246/192.168.2.246:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-11 01:21:24 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:852) - Socket connection established to 192.168.2.246/192.168.2.246:2181, initiating session
+2016-03-11 01:21:24 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:1235) - Session establishment complete on server 192.168.2.246/192.168.2.246:2181, sessionid = 0x151f28653fdaa10, negotiated timeout = 20000
+2016-03-11 01:21:24 [main-EventThread] INFO  com.renren.cluster.ClusterCommon$ZKConnWatcher (ClusterCommon.java:112) - Successfully connected to ZK.
+2016-03-11 01:21:24 [main] INFO  com.renren.cluster.client.ClusterPools (ClusterPools.java:158) - Create Pool: 0:192.168.2.246:6379 slave:[]
+2016-03-11 01:21:24 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:313) - Root WebApplicationContext: initialization completed in 915 ms
+2016-03-11 01:21:25 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:454) - FrameworkServlet 'springServlet': initialization started
+2016-03-11 01:21:25 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:21:25 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:21:25 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-mvc.xml]
+2016-03-11 01:21:25 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:21:25 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@68e7e099: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1c55252c
+2016-03-11 01:21:25 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:315) - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-03-11 01:21:25 [main] INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping (AbstractHandlerMethodMapping.java:179) - Mapped "{[/verify],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.touclick.captcha.TouclickController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-03-11 01:21:25 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:302) - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-03-11 01:21:26 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:473) - FrameworkServlet 'springServlet': initialization completed in 633 ms
+2016-03-11 01:25:28 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:21:25 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:25:28 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@68e7e099: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@1c55252c
+2016-03-11 01:25:28 [Thread-1] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:1042) - Closing Root WebApplicationContext: startup date [Fri Mar 11 13:21:24 CST 2016]; root of context hierarchy
+2016-03-11 01:25:28 [Thread-1] INFO  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry (DefaultSingletonBeanRegistry.java:444) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c55252c: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:25:35 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:273) - Root WebApplicationContext: initialization started
+2016-03-11 01:25:35 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing Root WebApplicationContext: startup date [Fri Mar 11 13:25:35 CST 2016]; root of context hierarchy
+2016-03-11 01:25:35 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from class path resource [applicationContext.xml]
+2016-03-11 01:25:35 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:231) - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2016-03-11 01:25:35 [main] INFO  org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider (ClassPathScanningCandidateComponentProvider.java:239) - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2016-03-11 01:25:35 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:25:35 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6b63d131: defining beans [propertyConfigurer,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,redisClusterClient,org.springframework.context.annotation.internalAsyncAnnotationProcessor,org.springframework.context.annotation.internalScheduledAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:host.name=zhanwei-ThinkPad-T450
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.version=1.7.0_79
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.vendor=Oracle Corporation
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.home=/home/zhanwei/usr/java/jdk1.7.0_79/jre
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.class.path=/home/zhanwei/maven/apache-maven-3.3.3/boot/plexus-classworlds-2.5.2.jar
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.io.tmpdir=/tmp
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:java.compiler=<NA>
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.name=Linux
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.arch=amd64
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:os.version=3.16.0-62-generic
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.name=zhanwei
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.home=/home/zhanwei
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.Environment (Environment.java:100) - Client environment:user.dir=/home/zhanwei/workspace/captcha-demo
+2016-03-11 01:25:35 [main] INFO  org.apache.zookeeper.ZooKeeper (ZooKeeper.java:438) - Initiating client connection, connectString=192.168.2.246:2181 sessionTimeout=20000 watcher=com.renren.cluster.ClusterCommon$ZKConnWatcher@3861c498
+2016-03-11 01:25:35 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:975) - Opening socket connection to server 192.168.2.246/192.168.2.246:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-03-11 01:25:35 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:852) - Socket connection established to 192.168.2.246/192.168.2.246:2181, initiating session
+2016-03-11 01:25:35 [main-SendThread(192.168.2.246:2181)] INFO  org.apache.zookeeper.ClientCnxn$SendThread (ClientCnxn.java:1235) - Session establishment complete on server 192.168.2.246/192.168.2.246:2181, sessionid = 0x151f28653fdaa11, negotiated timeout = 20000
+2016-03-11 01:25:35 [main-EventThread] INFO  com.renren.cluster.ClusterCommon$ZKConnWatcher (ClusterCommon.java:112) - Successfully connected to ZK.
+2016-03-11 01:25:35 [main] INFO  com.renren.cluster.client.ClusterPools (ClusterPools.java:158) - Create Pool: 0:192.168.2.246:6379 slave:[]
+2016-03-11 01:25:36 [main] INFO  org.springframework.web.context.ContextLoader (ContextLoader.java:313) - Root WebApplicationContext: initialization completed in 1044 ms
+2016-03-11 01:25:36 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:454) - FrameworkServlet 'springServlet': initialization started
+2016-03-11 01:25:36 [main] INFO  org.springframework.context.support.AbstractApplicationContext (AbstractApplicationContext.java:510) - Refreshing WebApplicationContext for namespace 'springServlet-servlet': startup date [Fri Mar 11 13:25:36 CST 2016]; parent: Root WebApplicationContext
+2016-03-11 01:25:36 [main] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader (XmlBeanDefinitionReader.java:315) - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-mvc.xml]
+2016-03-11 01:25:36 [main] INFO  org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:140) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-11 01:25:36 [main] INFO  org.springframework.beans.factory.support.DefaultListableBeanFactory (DefaultListableBeanFactory.java:598) - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3ece015e: defining beans [touclickController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0,org.springframework.web.servlet.handler.SimpleUrlHandlerMapping#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,org.springframework.web.servlet.view.InternalResourceViewResolver#0,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.config.viewControllerHandlerMapping,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@6b63d131
+2016-03-11 01:25:36 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:315) - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2016-03-11 01:25:36 [main] INFO  org.springframework.web.servlet.handler.AbstractHandlerMethodMapping (AbstractHandlerMethodMapping.java:179) - Mapped "{[/verify],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.touclick.captcha.TouclickController.verify(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-03-11 01:25:37 [main] INFO  org.springframework.web.servlet.handler.AbstractUrlHandlerMapping (AbstractUrlHandlerMapping.java:302) - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-03-11 01:25:37 [main] INFO  org.springframework.web.servlet.FrameworkServlet (FrameworkServlet.java:473) - FrameworkServlet 'springServlet': initialization completed in 929 ms
+2016-03-11 01:32:18 [qtp959470844-17] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:32:18 [qtp959470844-17] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>500 - 系统内部错误</title>
+</head>
+
+<body>
+	<h2>500 - 系统发生内部错误.</h2>
+	<p><a href="/sverify/;jsessionid=E880327A91721CB470AF7ECCDEEFE46D">返回首页</a></p>
+</body>
+</html>
+; line: 8, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:931)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:992)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:33:15 [qtp959470844-20] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:33:15 [qtp959470844-20] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>500 - 系统内部错误</title>
+</head>
+
+<body>
+	<h2>500 - 系统发生内部错误.</h2>
+	<p><a href="/sverify/;jsessionid=AFC608F0D64F205A7B8D6DB1ECE76CD3">返回首页</a></p>
+</body>
+</html>
+; line: 8, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:931)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:992)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:34:26 [qtp959470844-21] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:34:26 [qtp959470844-21] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>500 - 系统内部错误</title>
+</head>
+
+<body>
+	<h2>500 - 系统发生内部错误.</h2>
+	<p><a href="/sverify/;jsessionid=AE85E55BAC9B0347F1236ADDC39E76CC">返回首页</a></p>
+</body>
+</html>
+; line: 8, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:931)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:992)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:35:38 [qtp959470844-19] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:35:38 [qtp959470844-19] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>500 - 系统内部错误</title>
+</head>
+
+<body>
+	<h2>500 - 系统发生内部错误.</h2>
+	<p><a href="/sverify/;jsessionid=EBC9936E789714BC2325BC6466629302">返回首页</a></p>
+</body>
+</html>
+; line: 8, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:931)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:992)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-11 01:38:32 [qtp959470844-21] WARN  org.apache.commons.httpclient.HttpMethodBase (HttpMethodBase.java:682) - Going to buffer response body of large or unknown size. Using getResponseBodyAsStream instead is recommended.
+2016-03-11 01:38:32 [qtp959470844-21] ERROR com.touclick.captcha.service.TouClick (TouClick.java:92) - transfer json error ..
+com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: 
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>500 - 系统内部错误</title>
+</head>
+
+<body>
+	<h2>500 - 系统发生内部错误.</h2>
+	<p><a href="/sverify/;jsessionid=3D7C5990C26843130063452538CE1FEE">返回首页</a></p>
+</body>
+</html>
+; line: 8, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1586)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:521)
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:450)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:1823)
+	at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:708)
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3829)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3774)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2779)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:89)
+	at com.touclick.captcha.service.TouClick.check(TouClick.java:40)
+	at com.touclick.captcha.TouclickController.verify(TouclickController.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:652)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1329)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1300)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:445)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:559)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:227)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1038)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:374)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:189)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:972)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:363)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:483)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:931)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:992)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:627)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:51)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)

@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-sdk",
+  "version": "1.0.1",
+  "description": "Touclick sdk for nodejs",
+  "scripts": {
+    "start": "node ./post.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/touclick/captcha-demo.git"
+  },
+  "keywords": [
+    "touclick",
+    "sdk"
+  ],
+  "author": "delete",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/touclick/captcha-demo/issues"
+  },
+  "homepage": "https://github.com/touclick/captcha-demo#readme",
+  "dependencies": {
+    "finalhandler": "^0.4.1",
+    "request": "^2.72.0",
+    "router": "^1.1.4",
+    "touclick-nodejs-sdk": "^1.0.8"
+  }
+}

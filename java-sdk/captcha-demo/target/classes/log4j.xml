@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false"
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+
+	<appender name="captcha.fileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="logs/captcha.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd-HH'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd hh:mm:ss} [%t] %-5p %C{6} (%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="com.touclick" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="captcha.fileAppender" />
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="captcha.fileAppender" />
+	</root>
+
+</log4j:configuration>

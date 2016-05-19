@@ -1,0 +1,8 @@
+[2016-05-18 16:48:15.767] [ERROR] touclick - { [Error: getaddrinfo ENOTFOUND undefined.touclick.com]
+  code: 'ENOTFOUND',
+  errno: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'undefined.touclick.com' }
+Error: getaddrinfo ENOTFOUND undefined.touclick.com
+    at errnoException (dns.js:44:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:94:26)
