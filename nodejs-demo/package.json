@@ -23,6 +23,6 @@
     "finalhandler": "^0.4.1",
     "request": "^2.72.0",
     "router": "^1.1.4",
-    "touclick-nodejs-sdk": "^1.0.8"
+    "touclick-nodejs-sdk": "^1.0.9"
   }
 }

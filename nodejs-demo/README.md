@@ -75,3 +75,8 @@ $ npm install --save touclick-nodejs-sdk
 
 关于SDK，详见 [https://github.com/zyayhj/touclick-nodejs-sdk](https://github.com/zyayhj/touclick-nodejs-sdk#readme "nodejs-sdk")
 
+### 联系我们：
+（商务洽谈）官Q1：3180210030 ，电话010-53608568
+
+（技术支持）官Q1：495067988  
+

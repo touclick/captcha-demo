@@ -7,12 +7,13 @@
  */
 var finalhandler = require('finalhandler'), http = require('http'), Router = require('router'), fs = require('fs'),querystring = require('querystring');
 var touclickSdk = require('touclick-nodejs-sdk');
-
 /**
  * 请于http://admin.touclick.com 注册以获取公钥与私钥
  */
 var pubkey = "",
 	prikey = "";
+
+var username = "admin",password = "admin";//DEMO演示用，一般情况可忽略
 
 touclickSdk.init(pubkey, prikey);
 
@@ -47,12 +48,19 @@ router.post('/postdata',function(req, res){
         var params = querystring.parse(postData);
         console.log(JSON.stringify(params));
 
-        var token = params["token"],checkAddress = params["checkAddress"],checkCode = params["checkCode"];
+        var token = params["token"],checkAddress = params["checkAddress"],sid = params["sid"];
         
-        touclickSdk.check(token,checkAddress,checkCode, function(result){
-			console.log(result)
+        touclickSdk.check(token,checkAddress,sid, function(result,ckCode){
+			console.log(result);
+			console.log(ckCode);//请查阅点触的技术文档，或咨询点触工程师了解ckCode用法，有助于增强安全性；一般情况下可忽略该参数
 	        if(result["code"] === 0){
-	        	res.end("SUCCESS");
+	        	var isLoginSucc = false;
+	        	if(params["username"] == username && params["password"] == password){
+	        		isLoginSucc = true;
+	        	}
+	        	//通知点触服务器是否登录成功，既用户名和密码校验是否正确
+	        	touclickSdk.callback(token,checkAddress,sid,isLoginSucc);
+	        	res.end("Captcha verify SUCCESS; username and password : " + isLoginSucc);
 	        }else{
 	        	res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'});
 				res.end(JSON.stringify(result));

@@ -7,7 +7,7 @@
  */
 var finalhandler = require('finalhandler'), http = require('http'), Router = require('router'), fs = require('fs'),querystring = require('querystring'), request = require('request');
 var touclickSdk = require('touclick-nodejs-sdk');
-var VERSION = "5.1.0",URL = "http://js.touclick.com/sdk/version/notify?"
+var VERSION = "5.2.0",URL = "http://js.touclick.com/sdk/version/notify?"
 
 /**
  * on linux,you can "$ export PORT=3001".

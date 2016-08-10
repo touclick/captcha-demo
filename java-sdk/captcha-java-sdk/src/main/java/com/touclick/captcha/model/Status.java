@@ -18,18 +18,29 @@ public class Status {
     
     
     private int code;
+    
+    private String checkCode;
 
     private String message;
     
     public Status() {
     }
 
-    public Status(int code, String message) {
+    public Status(int code, String checkCode ,String message) {
         this.code = code;
+        this.checkCode = checkCode;
         this.message = message;
     }
 
-    public int getCode() {
+	public String getCheckCode() {
+		return checkCode;
+	}
+
+	public void setCheckCode(String checkCode) {
+		this.checkCode = checkCode;
+	}
+
+	public int getCode() {
         return code;
     }
 

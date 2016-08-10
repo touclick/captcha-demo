@@ -34,16 +34,16 @@ $ go run activate.go
 2. 初始化验证类
 
   ```golang
-  
+
   import touclick
-  
+
   //pub_key 是你的公钥
   //pri_key 是你的私钥
   var tc = touclick.NewTouclick(pub_key, pri_key)
   ```
 
 3. 二次验证
-  
+
   ```golang
   var tc = touclick.NewTouclick(pub_key, pri_key)
   check_code := req.PostFormValue(touclick.CHECK_CODE)
@@ -56,9 +56,9 @@ $ go run activate.go
       #执行自己的程序逻辑
   }
   ```
-  
+
   `Check`方法的返回对象为Status`，可能的取值如下所示：
-  
+
   ```golang
   Status{Code : 0, Msg : ""}
   Status{Code : 1, Msg : "该验证已过期"}
@@ -83,20 +83,23 @@ $ go run activate.go
   ```html
   <script src="http://js.touclick.com/js.touclick?b=公钥（从点触官网申请）" ></script>
   ```
-  
+
 2. 在demo.go中填写
   ```golang
   import touclick
-  
+
   var pubKey = "你的公钥（官网申请）"
   var priKey = "你的私钥（官网申请）"
   ```
-  
+
 3. 运行demo
   ```bash
   $ go run demo.go
   ```
-  
+
 在浏览器中访问http://127.0.0.1:8080 即可看到demo界面
 
+### 联系我们：
+（商务洽谈）官Q1：3180210030 ，电话010-53608568
 
+（技术支持）官Q1：495067988  

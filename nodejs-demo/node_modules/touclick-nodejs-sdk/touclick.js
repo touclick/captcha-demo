@@ -6,7 +6,7 @@
 * @version 1.0
  */
 var _pubkey,_prikey;
-var  HTTP = "http://", POSTFIX = ".touclick.com/sverify.touclick?";
+var  HTTP = "http://", POSTFIX = ".touclick.com/sverify.touclick2?",POSTFIX_CB = ".touclick.com/callback?";
 var status = {
 	STATUS_OK :             {code: 0, message: '验证成功'},
     STATUS_TOKEN_EXPIRED :  {code: 1, message: '该验证已过期'},
@@ -38,7 +38,7 @@ var md5 = function(content){
 }
 
 var sign = (function(){
-	var keyArr = ["ckcode","i","b","un","ud","ip","ran"];
+	var keyArr = ["s","i","b","un","ud","ip","ran"];
 	keyArr.sort();
 
 	return function(params,prikey){
@@ -50,6 +50,22 @@ var sign = (function(){
 	}
 })();
 
+var signCallback = (function(){
+	var keyArr = ["s","i","b","su","ip","ran"];
+	keyArr.sort();
+
+	return function(params,prikey){
+		var signarr = [];
+		keyArr.forEach(function(val){
+			signarr.push(val + "=" + params[val]);
+		});
+		return md5(signarr.join("&") + prikey);
+	}
+})();
+
+var getRandomString = function(){
+	return crypto.randomBytes(24).toString('base64').replace(/\+|\//g,'0');
+}
 var request = require('request'), log4js = require('log4js'), qs = require('querystring');
 
 log4js.configure({
@@ -75,14 +91,14 @@ module.exports  = {
 	/**
 	* @param token 二次验证口令，单次有效
 	* @param checkAddress 二次验证地址，二级域名
-	* @param checkCode 校验码，开发者自定义，一般采用手机号或者用户ID，用来更细致的频次控制
+	* @param sid 验证批次号
 	* @param callback 回调函数,参数：{code:0,message:'验证正确'}
 	 */
-	check : function(token, checkAddress, checkCode, callback){
-		if(!checkAddress || !/^[_\-0-9a-zA-Z]+$/.test(checkAddress) || !token){
+	check : function(token, checkAddress, sid, callback){
+		if(!checkAddress || !/^[_\-0-9a-zA-Z]+$/.test(checkAddress) || !token || !sid){
 			callback(status.STATUS_HTTP_ERROR);
 		}
-		var params = {"ckcode": checkCode, "i": token, "b": _pubkey, "un": "", "ud": 0, "ip": "",ran: crypto.randomBytes(24).toString('base64').replace(/\+|\//g,'0')};
+		var params = {"s": sid, "i": token, "b": _pubkey, "un": "", "ud": 0, "ip": "",ran: getRandomString()};
 
         params["sign"] = sign(params, _prikey);
         var url = HTTP + checkAddress + POSTFIX;
@@ -105,7 +121,6 @@ module.exports  = {
 						logger.error(error);
 						callback(status.STATUS_JSON_TRANS_ERROR);
 					}
-
 					if(res["sign"]){
 						var checkParam = {"code":res["code"],"timestamp":params["ran"]};//code 与 timestamp 的顺序不可以修改
 						var localSign = md5(qs.stringify(checkParam) + _prikey);
@@ -113,7 +128,7 @@ module.exports  = {
 						if(localSign !== res["sign"]){
 							callback(status.SIGN_ERROR);
 						}
-						callback(statusByCode[res["code"]]);
+						callback(statusByCode[res["code"]], res["ckCode"]);
 					}else if(res["code"] !== 0 ){
 						logger.warn(res);
 						callback(statusByCode[res["code"]])
@@ -130,6 +145,28 @@ module.exports  = {
         }catch(e){
         	logger.error(e);
         	callback(status.STATUS_HTTP_ERROR);
+        }
+
+	},
+	callback : function(token, checkAddress, sid, isLoginSucc){
+		if(!checkAddress || !/^[_\-0-9a-zA-Z]+$/.test(checkAddress) || !token || !sid){
+			logger.error("param error in callback");
+			return false;
+		}
+		params = { "ip": '', "i": token, "s": sid, "b": _pubkey, "su":(isLoginSucc?"1":"0"), "ran": getRandomString()};
+		params["sign"] = signCallback(params, _prikey);
+        var url = HTTP + checkAddress + POSTFIX_CB;
+        logger.debug(url);
+        try{
+			request({
+				method: "GET",
+				uri: url + qs.stringify(params),
+				timeout: 5000
+			}, function (error, response, body) {
+				
+			})
+        }catch(e){
+        	logger.error(e);
         }
 
 	},

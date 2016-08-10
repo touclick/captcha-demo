@@ -1,6 +1,7 @@
 package touclick
 
 import (
+    "net"
     "net/http"
     "io/ioutil"
     "io"
@@ -12,13 +13,13 @@ import (
     "encoding/json"
     "regexp"
     "strconv"
-    "fmt"
 )
 
 const(
     HTTP = "http://"
-    POSTFIX = ".touclick.com/sverify.touclick"
-    CHECK_CODE = "checkCode"
+    CHECK_POSTFIX = ".touclick.com/sverify.touclick2"
+    CALLBACK_POSTFIX = ".touclick.com/callback"
+    SID = "sid"
     CHECK_ADDRESS = "checkAddress"
     TOKEN = "token"
 )
@@ -58,6 +59,21 @@ func init(){
     checkAddressPattern,_ = regexp.Compile("^[_\\-0-9a-zA-Z]+$")
 }
 
+func getLocalIp() string{
+	addrs, err := net.InterfaceAddrs()
+	if err != nil {
+		return ""
+	}
+	for _, a := range addrs {
+		if ipnet, ok := a.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+			if ipnet.IP.To4() != nil {
+                return ipnet.IP.String();
+			}
+		}
+	}
+	return ""
+}
+
 func NewTouclick(pubKey,priKey string) *Touclick{
     t := &Touclick{
         pubKey : pubKey,
@@ -68,31 +84,31 @@ func NewTouclick(pubKey,priKey string) *Touclick{
 
 /**
  * 二次验证
- * @Param check_code 一次验证返回的check code
  * @Param check_address 一次验证返回的check address
+ * @Param sid 一次验证返回的sid
  * @Param token 一次验证返回的token
  * @Param user_name 用户名，可选
  * @Param user_id 用户ID，可选
  * @Return 返回Status
  */
-func (t *Touclick) Check(check_code,check_address,token,user_name,user_id string) *Status {
+func (t *Touclick) Check(check_address,sid,token,user_name,user_id string) *Status {
 
     if !checkAddressPattern.MatchString(check_address){
         return StatusMap["STATUS_CHECKADDRESS_ERROR"]
     }
 
     params := map[string]string{
-        "ckcode" : check_code,
+        "s" : sid,
         "i" : token,
         "b" : t.pubKey,
         "un" : user_name,
         "ud" : user_id,
-        "ip" : "",
+        "ip" : getLocalIp(),
         "ran" : getRandString(),
     }
 
     params["sign"] = _sign(params,t.priKey)
-    url := HTTP + check_address + POSTFIX
+    url := HTTP + check_address + CHECK_POSTFIX
     url = url + "?" + makeUrlParam(params)
 
     resp, err := http.Get(url)
@@ -122,6 +138,38 @@ func (t *Touclick) Check(check_code,check_address,token,user_name,user_id string
         }
     }
     return &Status{Code: r.Code, Msg : r.Message}
+}
+
+/**
+* 回调，用户名和密码验证成功后的回调方法
+* @Param check_address 一次验证返回的check address
+* @Param sid 一次验证返回的sid
+* @Param token 一次验证返回的token
+* @Param isLoginSucc 用户名和密码是否检验成功
+*/
+func (t *Touclick) Callback(check_address,sid,token string,isLoginSucc bool){
+    if !checkAddressPattern.MatchString(check_address){
+        return
+    }
+    var su string = "0"
+    if isLoginSucc {
+        su = "1"
+    }
+    params := map[string]string{
+        "s" : sid,
+        "i" : token,
+        "b" : t.pubKey,
+        "su" : su,
+        "ip" : getLocalIp(),
+        "ran" : getRandString(),
+    }
+
+    params["sign"] = _sign(params,t.priKey)
+    url := HTTP + check_address + CALLBACK_POSTFIX
+    url = url + "?" + makeUrlParam(params)
+
+    resp, _ := http.Get(url)
+    defer resp.Body.Close()
 }
 
 func makeUrlParam(params map[string]string) string{

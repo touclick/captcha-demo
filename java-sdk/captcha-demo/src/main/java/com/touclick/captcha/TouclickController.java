@@ -23,8 +23,8 @@ public class TouclickController {
     
     private TouClick touclick = new TouClick(); 
     
-    private static final String PUBKEY = "";//公钥(从点触官网获取)
-    private static final String PRIKEY = "";//私钥(从点触官网获取)
+    private static final String PUBKEY = "c39469b6-e947-4480-ba06-ad0cf0a70f85";//公钥(从点触官网获取)
+    private static final String PRIKEY = "15f1d6c3-7a87-441d-ad9d-c6a9014c7ccb";//私钥(从点触官网获取)
     
     /**
      * @throws TouclickException 
@@ -44,10 +44,9 @@ public class TouclickController {
     	*/
         String checkAddress = request.getParameter("checkAddress");
         String token = request.getParameter("token");
-        //一次验证传递的参数,同一次验证一样
-        String checkCode = request.getParameter("checkCode");
-        Status status = touclick.check(checkCode,checkAddress,token,PUBKEY,PRIKEY);
-        System.out.println("checkAddress :"+checkAddress + ",token:" + token+ ",checkCode:" + checkCode);
+        String sid = request.getParameter("sid");
+        Status status = touclick.check(checkAddress,sid,token,PUBKEY,PRIKEY);
+        System.out.println("checkAddress :"+checkAddress + ",token:" + token);
         System.out.println("code :"+status.getCode() + ",message:" + status.getMessage());
         if(status != null && status.getCode()==0){
             //执行自己的程序逻辑

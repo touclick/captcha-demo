@@ -48,31 +48,32 @@ $ python start.py
 
   ```python
   tc = TouclickLib(pub_key, pri_key)
-  check_code = self.get_argument(tc.CHECK_CODE, "")
+  sid = self.get_argument(tc.SID, "")
   check_address = self.get_argument(tc.CHECK_ADDRESS, "")
   token = self.get_argument(tc.TOKEN, "")
-  code, msg = tc.check(check_code, check_address, token)
+  code, check_code, msg = tc.check(check_address, sid, token)
   if code == 0:
       #执行自己的程序逻辑
+      #tc.callback(check_address, sid, token, True)
       pass
   ```
 
-  `check`方法的返回值为元组`(code, message)`，可能的取值如下所示：
+  `check`方法的返回值为元组`(code, check_code, message)`，可能的取值如下所示：
 
   ```python
-  (0, "验证正确")
-  (1, "该验证已过期")
-  (2, "公钥不可为空")
-  (3, "一次验证返回的token为必需参数,不可为空")
-  (4, "公钥不正确")
-  (5, "CheckCode有误,请确认CheckCode是否和一次验证传递一致"),
-  (6, "sign加密错误,请检查参数是否正确")
-  (7, "一次验证错误")
-  (8, "点触服务器异常")
-  (9, "http请求异常")
-  (10, "json转换异常,可能是请求地址有误,请检查请求地址(http://[checkAddress].touclick.com/sverify.touclick?参数)")
-  (11, "二次验证地址不合法")
-  (12, "签名校验失败,数据可能被篡改")
+  (0, "ckCode", "验证正确")
+  (1, "ckCode", "该验证已过期")
+  (2, "ckCode", "公钥不可为空")
+  (3, "ckCode", "一次验证返回的token为必需参数,不可为空")
+  (4, "ckCode", "公钥不正确")
+  (5, "ckCode", "CheckCode有误,请确认CheckCode是否和一次验证传递一致"),
+  (6, "ckCode", "sign加密错误,请检查参数是否正确")
+  (7, "ckCode", "一次验证错误")
+  (8, "ckCode", "点触服务器异常")
+  (9, "ckCode", "http请求异常")
+  (10, "ckCode", "json转换异常,可能是请求地址有误,请检查请求地址(http://[checkAddress].touclick.com/sverify.touclick2?参数)")
+  (11, "ckCode", "二次验证地址不合法")
+  (12, "ckCode", "签名校验失败,数据可能被篡改")
   ```
 
 ## 运行demo
@@ -98,3 +99,9 @@ $ python start.py
   ```
 
 在浏览器中访问http://127.0.0.1:8088 即可看到demo界面
+
+## 联系我们：
+
+（商务洽谈）官Q1：3180210030 ，电话010-53608568
+
+（技术支持）官Q1：495067988  

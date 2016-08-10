@@ -6,7 +6,7 @@ import requests
 
 from hashlib import md5
 
-VERSION = "5.1.0"
+VERSION = "5.2.0"
 URL = "http://js.touclick.com/sdk/version/notify"
 
 class MainHandler(tornado.web.RequestHandler):

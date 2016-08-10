@@ -1,5 +1,11 @@
 ##点触验证码 Nodejs SDK
 
+#### 更新历史
+
+1. `1.0.8`及之前版本适配SDK版本v5-1-0(点触后台可查看)
+
+2. `1.0.9`及以后版本适配SDK版本v5-2-0
+
 #### DEMO
 
 DEMO ：[http://github.com/touclick/captcha-demo/](https://github.com/touclick/captcha-demo/tree/master/nodejs-demo "nodejs-demo")
@@ -35,10 +41,10 @@ $ npm install --save touclick-nodejs-sdk
 	/**
 	 * @param token 二次验证口令，单次有效
 	 * @param checkAddress 二次验证地址，二级域名
-	 * @param checkCode 校验码，开发者自定义，一般采用手机号或者用户ID，用来更细致的频次控制
+	 * @param sid 验证批次号
  	 * @param callback 回调函数,参数：{code:0,message:'验证正确'}
 	 */
-	tc.check(token, checkAddress, checkCode, callback);
+	tc.check(token, checkAddress, sid, callback);
 
 	```
 

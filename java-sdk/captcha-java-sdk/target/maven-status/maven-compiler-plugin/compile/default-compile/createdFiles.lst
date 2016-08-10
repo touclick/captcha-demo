@@ -1,0 +1,9 @@
+com/touclick/captcha/model/Result.class
+com/touclick/captcha/util/TouclickUtil.class
+com/touclick/captcha/http/HttpClient.class
+com/touclick/captcha/util/MD5.class
+com/touclick/captcha/model/Parameter.class
+com/touclick/captcha/http/Response.class
+com/touclick/captcha/service/TouClick.class
+com/touclick/captcha/model/Status.class
+com/touclick/captcha/exception/TouclickException.class

@@ -4,8 +4,8 @@ import tornado.web
 import tornado.gen
 import sys
 
-reload(sys)   
-sys.setdefaultencoding('utf8')
+#reload(sys)
+#sys.setdefaultencoding('utf8')
 
 from touclick import TouclickLib
 
@@ -20,14 +20,15 @@ class MainHandler(tornado.web.RequestHandler):
 class VerifyHandler(tornado.web.RequestHandler):
     def post(self):
         tc = TouclickLib(pub_key, pri_key)
-        check_code = self.get_argument(tc.CHECK_CODE, "")
         check_address = self.get_argument(tc.CHECK_ADDRESS, "")
         token = self.get_argument(tc.TOKEN, "")
-        code, msg = tc.check(check_code, check_address, token)
+        sid = self.get_argument(tc.SID, "")
+        code, check_code, msg = tc.check(check_address, sid, token)
         if code == 0:
             #执行自己的程序逻辑
+            #tc.callback(check_address, sid, token, True)
             pass
-        self.write("code:" + str(code) + ", message:" + str(msg))
+        self.write("code:" + str(code) + ", ckCode:" + str(check_code) + ", message:" + str(msg))
 
 if __name__ == "__main__":
     app = tornado.web.Application([

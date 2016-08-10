@@ -29,16 +29,19 @@ func indexHandler(w http.ResponseWriter,req *http.Request){
 
 func verifyHandler(w http.ResponseWriter, req *http.Request){
   req.ParseForm()
-  check_code := req.PostFormValue(touclick.CHECK_CODE)
+  sid := req.PostFormValue(touclick.SID)
   check_address := req.PostFormValue(touclick.CHECK_ADDRESS)
   token := req.PostFormValue(touclick.TOKEN)
   user_name := ""
   user_id := ""
-  fmt.Println("check_code:" + check_code + ", check_address:" + check_address + ", token: " + token)
-  status := tc.Check(check_code,check_address,token,user_name,user_id)
+  fmt.Println("sid:" + sid + ", check_address:" + check_address + ", token: " + token)
+  status := tc.Check(check_address,sid,token,user_name,user_id)
   // Success, todo
   if status.Code == 0 {
-     //Todo, your own business
+     //Todo, your own business,check you username and password etc.
+
+     // if username and password check successfully,you can call Callback
+     tc.Callback(check_address,sid,token,true)
   }
   fmt.Println("code: " + strconv.Itoa(status.Code) + ", msg: " + status.Msg)
   w.Write([]byte("code: " + strconv.Itoa(status.Code) + ", msg: " + status.Msg))
@@ -46,6 +49,6 @@ func verifyHandler(w http.ResponseWriter, req *http.Request){
 
 func main(){
   http.HandleFunc("/",indexHandler)
-  http.HandleFunc("/verify",verifyHandler)
+  http.HandleFunc("/postdata",verifyHandler)
   http.ListenAndServe(":8080",nil)
 }

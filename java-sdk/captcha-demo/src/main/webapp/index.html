@@ -90,9 +90,11 @@
                 <label for="">密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
                 <input type="password" name="" value="" placeholder="演示页面，随意填写">   
             </div>
-            
+            <div class="wrap">
+               <div id="captcha-target"></div>
+            </div>
             <!-- 按钮 -->
-            <input type="button" value="点击出现验证码" id="submit1">      
+            <input type="button" value="提交" id="submit1">      
 
             <input type="hidden" value="1" name="token" id="token"/> 
             <input type="hidden" value="2" name="checkAddress" id="checkAddress"/>
@@ -113,18 +115,20 @@
     <script> 
         TouClick.ready(function(){
             document.getElementById('submit1').onclick = function(){
-                
-                TouClick().start({
-                    modal:true,
-                    position:"center",
-                    fit:true, 
-                    checkCode:document.getElementById("username").value,//可选 
-                    onSuccess : function(obj){
+                TouClick('captcha-target',{
+                    readyCheck:function(){
+                        if(TouClick.$('username').value==''){
+                            return {status:false}
+                        }
+                        return {status:true,checkCode:''}
+                    },
+                    onSuccess:function(obj){
                         document.getElementById("token").value = obj.token;
                         document.getElementById("checkAddress").value = obj.checkAddress;
-                        document.getElementById("checkCode").value = document.getElementById("username").value;//可选
+                        document.getElementById("sid").value = obj.sid;
                         document.getElementById("form").submit();
-                    }
+                    },
+                    behaviorDom:'username'
                 });
             }
         });

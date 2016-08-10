@@ -11,7 +11,7 @@ if __name__ == "__main__":
         required = f.read().splitlines()
     setup(
         name="touclick",
-        version="1.1.0",
+        version="1.2.0",
         packages=['captcha-python-sdk'],
         url='https://github.com/touclick/captcha-demo',
         license='',

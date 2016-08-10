@@ -6,9 +6,9 @@ public class Result {
 	
 	private String message;
 	
-	private long timestamp;
-	
 	private String sign;
+	
+	private String ckCode;
 
 	public int getCode() {
 		return code;
@@ -17,6 +17,14 @@ public class Result {
 	public void setCode(int code) {
 		this.code = code;
 	}
+	
+	public String getCkCode() {
+		return ckCode;
+	}
+
+	public void setCkCode(String ckCode) {
+		this.ckCode = ckCode;
+	}
 
 	public String getMessage() {
 		return message;
@@ -24,14 +32,6 @@ public class Result {
 
 	public void setMessage(String message) {
 		this.message = message;
-	}
-
-	public long getTimestamp() {
-		return timestamp;
-	}
-
-	public void setTimestamp(long timestamp) {
-		this.timestamp = timestamp;
 	}
 
 	public String getSign() {
@@ -45,6 +45,6 @@ public class Result {
 	
 	@Override
 	public String toString() {
-		return this.code + ":" + this.message + ":" + this.sign + ":" + this.timestamp;
+		return this.code + ":" + this.message + ":" + this.sign ;
 	}
 }
