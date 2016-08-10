@@ -12,7 +12,7 @@ import (
 )
 
 var htmlFileName = "static/index.html"
-var VERSION = "5.1.0"
+var VERSION = "5.2.0"
 var URL = "http://js.touclick.com/sdk/version/notify"
 
 func indexHandler(w http.ResponseWriter,req *http.Request){

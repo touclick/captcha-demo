@@ -24,7 +24,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 public class ActivateServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 	
-    private static final String VERSION = "5.1.0";//不可修改
+    private static final String VERSION = "5.2.0";//不可修改
     private static final String URL = "http://js.touclick.com/sdk/version/notify";
 	
     /**
@@ -44,7 +44,7 @@ public class ActivateServlet extends HttpServlet {
 	out.println("<html>");
 	out.println("<head>");
 	out.println("<title>点触验证码公钥激活</title>");
-	out.println("<script src='http://touclick.com/2/test/sofar/js/main.js?lan=java'></script>");
+	out.println("<script src='http://captcha-static.touclick.com/SDK/active/main-5-2-0-2.js?lan=java&v=5.2.0'></script>");
 	out.println("</head>");
 	out.println("<body>");  
         out.println("</body>");  

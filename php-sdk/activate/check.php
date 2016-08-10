@@ -2,7 +2,7 @@
 
 $param['b'] = strip_tags($_POST['b']);
 $priKey = strip_tags($_POST['z']);
-$param['v'] = '5.1.0';
+$param['v'] = '5.2.0';
 $param['sign'] = getSign($param, $priKey);
 $url = 'http://js.touclick.com/sdk/version/notify?'.http_build_query($param);
 
