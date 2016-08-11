@@ -41,7 +41,6 @@ class TouClick{
 		curl_setopt ( $ch, CURLOPT_HEADER, 0 );
 		$result = curl_exec ( $ch );
 		curl_close ( $ch );
-echo($result);
 		$check = is_object(json_decode($result)) ? get_object_vars(json_decode($result)) : json_decode($result);
 		if ($check['code'] == 0) {
 			$checkParam['code'] = $check['code'];
@@ -91,8 +90,6 @@ echo($result);
 		$params ['sign'] = $sign;
 		$paramStr = $this->getStr ( $params );
 		$url = "http://" . $checkAddress . ".touclick.com/callback" . '?' . $paramStr;
-echo($url);		
-		// use curl
 		$ch = curl_init ();
 		curl_setopt ( $ch, CURLOPT_URL, $url );
 		curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
