@@ -23,8 +23,8 @@ public class TouclickController {
     
     private TouClick touclick = new TouClick(); 
     
-    private static final String PUBKEY = "c39469b6-e947-4480-ba06-ad0cf0a70f85";//公钥(从点触官网获取)
-    private static final String PRIKEY = "15f1d6c3-7a87-441d-ad9d-c6a9014c7ccb";//私钥(从点触官网获取)
+    private static final String PUBKEY = "";//公钥(从点触官网获取)
+    private static final String PRIKEY = "";//私钥(从点触官网获取)
     
     /**
      * @throws TouclickException 

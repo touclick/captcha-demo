@@ -4,7 +4,7 @@
 ##开发环境
   
   - JDK 1.5及以上
-  - tomcat
+  - Tomcat 6.0及以上
 
 ##文件说明
 
@@ -13,8 +13,9 @@
 * captcha-java-sdk/ SDK源码
 * lib/ 项目中可能需要的jar包
   
-##演示demo
 
+
+##使用指南
 1. 在`TouclickController`中填写从点触官网注册获得的公钥和私钥
    ```java	
    private static final String PUBKEY = "";//公钥(从点触官网获取)
@@ -25,19 +26,16 @@
    ```xml
       <script src="http://js.touclick.com/js.touclick?b=公钥(从点触官网获得)" ></script>
    ```
-   
-3. 运行demo   
 
+3. 公钥激活
 
-##使用指南
+	`为了公钥能正常使用，请务必进行激活，如更换SDK，则需要使用新SDK的激活程序重新进行激活`
 
-####公钥激活
-`为了公钥能正常使用,请务必进行激活,如更换SDK,则需要使用新SDK的激活程序重新进行激活
-`激活过后,建议删除 ActivateServlet.java
+	`激活过后，建议删除ActivateServlet.java`
+	
+	* 将ActivateServlet.java复制到自己的项目中或者新建web项目运行ActivateServlet.java
 
-1. 将ActivateServlet.java复制到自己的项目中或者新建web项目运行ActivateServlet.java
-
-2. 在web.xml中添加如下配置
+	* 在web.xml中添加如下配置
    ```xml
    <servlet>
       <servlet-name>activateServlet</servlet-name>
@@ -49,24 +47,31 @@
    </servlet-mapping>
    ```
 
-3. 启动项目访问`http://localhost:8080/项目名/activate.do`
+   * 启动项目访问`http://localhost:8080/项目名/activate.do`
+    
+   * 在打开的页面中填写配套公钥与私钥进行激活，激活成功后可在官网后台查看版本号
+	
 
-   说明:端口号不一定是8080,依自己项目所使用的服务器为准;路径依自己放置的路径为准
+4. 运行demo
+	* 导入java-sdk-1.0.0.jar以及其他相关jar包 (lib目录下)
+	
+	* 浏览器访问`http://localhost:8080/项目名/index.html`即可体验
 
-4. 在打开的页面中按照引导提示操作激活
 
-#激活成功后再进行如下操作:
-
-####导包
-导入java-sdk-1.0.0.jar以及其他相关jar包 (lib目录下)
-
-####填写公钥私钥
-   ```java
-   private static final String PUBKEY = "";//公钥(从点触官网获取)
-   private static final String PRIKEY = "";//私钥(从点触官网获取)
-   ```
 
 ####调用SDK
+
+在pom.xml中添加对java-sdk的依赖，当您准备将点触添加到您的项目中去时，请先依赖该项目
+
+```xml
+<dependency>
+	<groupId>com.touclick.captcha</groupId>
+	<artifactId>java-sdk</artifactId>
+	<version>1.1.0</version>
+</denpendency>
+```
+
+
    ```java
    String checkKey = request.getParameter("checkAddress");
    String token = request.getParameter("token");
