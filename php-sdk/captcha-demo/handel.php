@@ -15,8 +15,8 @@ if (!preg_match('/^[\w\-]/',$checkAddress)){
 	exit('参数格式不正确');
 }
 /*$PUBKEY 、 $PRIKEY 从http://admin.touclick.com注册获取 */
-$PUBKEY = '';
-$PRIKEY = '';
+$PUBKEY = "你的公钥（官网申请）";
+$PRIKEY = "你的私钥（官网申请）";
 
 $touclick = new TouClick($PUBKEY,$PRIKEY);
 $res = $touclick->check($sid, $checkAddress, $token);
