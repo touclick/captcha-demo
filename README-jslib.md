@@ -1,5 +1,5 @@
 
-## TouClick Captcha JavaScript Lib (v5-2-x) 说明文档
+## TouClick Captcha JavaScript Lib (v5-2-x) API文档
 
 
 ### 验证码类：TouClick
