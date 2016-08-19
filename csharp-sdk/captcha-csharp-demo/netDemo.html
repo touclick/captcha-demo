@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Nodejs Demo</title>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!--<script src="http://js.touclick.com/js.touclick?b=公钥（点触官网获取）" ></script>-->
+    <script src="http://js.touclick.com/js.touclick?b=公钥（点触官网获取）" ></script>
+    <style>
+        body,html {
+            font-family: 'Microsoft YaHei';
+            font-size: 14px;
+            color: #444;
+        }
+        .form {
+            width: 650px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px #aaa,-1px -1px 10px #aaa;
+            padding: 10px 100px;
+            background-color: #f9f9f9;
+        }
+        .form h1 {
+            font-size: 28px;
+            color: #39f;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form img {
+            display: block;
+            width: 100%;
+        }
+        .wrap {
+            height: 50px;
+            margin: 10px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .wrap input {
+            width: 200px;
+            height: 30px;
+            padding-left:10px;
+            font-family: 'Microsoft YaHei';
+        }
+        .form >input[type='button'] {
+            display: block;
+            outline: none;
+            margin: 0 auto 40px;
+            width: 214px;
+            height: 40px;
+            color: #fff;
+            background: #39f;
+            border: 1px solid #39f;
+            cursor: pointer;
+            cursor: hand;
+            margin-left: 220px;
+            font-family: 'Microsoft YaHei';
+            font-size: 16px;
+        }
+        .form >input[type='button']:active {
+             background: #35a;
+        }
+        .company {
+            text-align: center;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一步 -->
+        <!-- www.touclick.com 点触官网申请公钥 -->
+    <!-- 第二步 -->
+        <!-- 将本页面源代码中 "公钥（点触官网获取）" 替换成 您在官网申请的公钥 -->
+        <!-- 例如 <script src="http://js.touclick.com/js.touclick?b=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" ></script> -->
+    <form action="postdata" method="POST" id="form" class="form" target="_blank">        
+        <h1 class="logo">
+            .Net DEMO
+            <img src="http://captcha-static.touclick.com/SDK/sdk-static-note.png" alt="">
+        </h1>           
+        <!-- 用户名 -->
+        <div class="wrap">
+            <label for="">用户名:</label>
+            <input type="text" name="username" value="" id="username" placeholder="演示页面，随意填写">   
+        </div>
+        
+        <!-- 密码 -->
+        <div class="wrap">
+            <label for="">密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+            <input type="password" name="password" value="" placeholder="演示页面，随意填写">   
+        </div>
+
+        <!-- 验证码嵌入位置 -->
+        <div class="wrap" >
+             <div id="captcha-target" style="display: inline-block;width: 339px;"></div>
+        </div>
+        
+        <!-- 按钮 -->
+        <input type="button" value="提交" id="_submit">      
+
+        <input type="hidden" name="token" id="token"/> 
+        <input type="hidden" name="checkAddress" id="checkAddress"/>
+        <input type="hidden" name="sid" id="sid"/>
+
+        <!-- 公司 -->
+        <div class="company">               
+            <p style="font-size: 12px;">                    
+                Copyright 2012-2016 by 北京点触互联科技有限公司           
+                <br>        
+                <br> 
+                <a href="http://touclick.com" style="color:#39f"> www.touclick.com </a>             
+            </p>            
+        </div>  
+         
+    </form>   
+    <script> 
+        var $ = function(id){
+            return document.getElementById(id);
+        }
+        TouClick.ready(function(){
+            /*
+             * @param 嵌入点ID
+             * @param 配置参数
+             */
+            TouClick('captcha-target',{
+                onSuccess : function(obj){
+                    $("token").value = obj.token;
+                    $("checkAddress").value = obj.checkAddress;
+                    $("sid").value = obj.sid;
+                },
+                behaviorDom:'username'
+            });
+        });
+        $("_submit").onclick = function(){
+            $('form').submit();
+        }
+    </script>
+</body>
+</html>

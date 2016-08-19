@@ -7,6 +7,7 @@
 [![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/python4.png)](https://github.com/touclick/captcha-demo/tree/master/python-sdk)
 [![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/GO4.png)](https://github.com/touclick/captcha-demo/tree/master/go-sdk)
 [![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/JS4.png)](https://github.com/touclick/captcha-demo/tree/master/nodejs-demo)
+[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/csharp.png)](https://github.com/touclick/captcha-demo/tree/master/csharp-sdk)
 
 ### 适用情况
 
