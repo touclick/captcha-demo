@@ -2,12 +2,12 @@
 
 详情请关注各语言sdk
 
-[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/JAVA4.png)](https://github.com/touclick/captcha-demo/tree/master/java-sdk)
-[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/PHP4.png)](https://github.com/touclick/captcha-demo/tree/master/php-sdk)
-[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/python4.png)](https://github.com/touclick/captcha-demo/tree/master/python-sdk)
-[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/GO4.png)](https://github.com/touclick/captcha-demo/tree/master/go-sdk)
-[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/JS4.png)](https://github.com/touclick/captcha-demo/tree/master/nodejs-demo)
-[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/csharp.png)](https://github.com/touclick/captcha-demo/tree/master/csharp-sdk)
+[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/JAVA4.png)](https://github.com/touclick/java-sdk)
+[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/PHP4.png)](https://github.com/touclick/php-sdk)
+[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/python4.png)](https://github.com/touclick/python-sdk)
+[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/GO4.png)](https://github.com/touclick/go-sdk)
+[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/JS4.png)](https://github.com/touclick/nodejs-demo)
+[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/csharp.png)](https://github.com/touclick/csharp-sdk)
 
 ### 适用情况
 
@@ -27,7 +27,7 @@ README-jslib.md 是 JavaScript Lib 文档
 
 `5.2.0` 当前版本
 
-`5.1.0` 不再提供新接入，点触客服人员会尽快联系开发者进行升级
+`5.1.0` `5.0.1` 不再提供新接入，点触客服人员会尽快联系开发者进行升级
 
 
 ### 效果图
