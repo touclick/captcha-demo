@@ -7,8 +7,8 @@
 ## 静态方法:
 
 ```javascript
-/* 类似于 jQuery.ready 的功能，其他验证码调用代码均应在参数函数体中实现 */
-ready(function(){}) 
+/* 类似于 jQuery.ready 的功能，验证码相关代码均应在实参函数体中实现 */
+TouClick.ready(function(){}) 
 ```
 
 ####### 调用实例:
