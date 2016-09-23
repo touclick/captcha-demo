@@ -1,14 +1,12 @@
 
 ## TouClick Captcha JavaScript Lib (v5-2-x) API文档
-
-
 ### 验证码类：TouClick
 	
 ## 静态方法:
 
 ```javascript
-/* 类似于 jQuery.ready 的功能，验证码相关代码均应在实参函数体中实现 */
-TouClick.ready(function(){}) 
+/* 类似于 jQuery.ready 的功能，其他验证码调用代码均应在参数函数体中实现 */
+ready(function(){}) 
 ```
 
 ####### 调用实例:
@@ -38,7 +36,6 @@ TouClick(dom, options)
 
 ```javascript
 var options = {
-
 	/*
 	 * 验证成功以后的回调函数
 	 * 需要调用者实现这个函数，并将参数 token,checkAddress,sid 传到服务器端
@@ -70,12 +67,113 @@ var options = {
 	},
 
 	/*
-	 * 需要监控键盘行为的输入框 id 
+	 * 需要监控键盘行为的输入框 id
 	 *
 	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
 	 */
-	behaviorDom: ''
+	behaviorDom: '',
 
+	/*
+	 * 验证失败以后的回调函数
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+	onFailure:function(){
+		/*
+		 * 验证码验证失败。
+		 * 可以写入验证失败后的提示信息，提高用户体验
+		 *
+		 */
+	},
+
+	/*
+	 * 关闭验证码后的回调函数
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+	onClose:function(){
+        /*
+		 * 点击关闭按钮关闭验证码
+		 *
+		 */
+    },
+
+    /*
+	 * 验证码图案点击的回调函数
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+	onClick:function(){
+        /*
+		 * 验证码图案每一次点击的回调函数
+		 *
+		 */
+    },
+
+    /*
+	 * 自定义点击图案
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+    hoverImg:"url",
+
+    /*
+	 * 自定义验证失败后显示的图案
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+    failureImg:"url",
+
+    /*
+	 * 自定义验证失败后显示的图案
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 *
+	 */
+	 isOpenMask:function(env){
+		/*
+		 * 设置验证码的遮罩层
+		 *  return true;  设置遮罩层
+		 *  return false; 取消遮罩层
+		 *  默认 return false;
+		 */
+	 },
+
+	 /*
+	 * 点击遮罩层关闭验证码
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 *
+	 */
+	onMaskClick:function(e){
+		/*
+		 *  调用close()对象方法进行验证码关闭
+		 */
+        tc.close();
+    },
+
+    /*
+	 * 设置验证码位置
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 *
+	 */
+	isCaptchaFloat:function(env){
+		/*
+		 *  两种验证码显示位置  默认:return true
+		 *  1. return true; 屏幕居中显示
+		 *  2. return false; 嵌入显示
+		 *
+		 *  可以使用官方提供的 env 参数
+		 *  mob:屏幕宽度小于530
+		 *  pc: 屏幕宽度大于530
+		 */
+        if(env == "pc"){
+            return true;   //屏幕宽度大于530px时  验证码屏幕居中显示
+        }else if(env == "mob"){
+            return false;   //屏幕宽度小于530px时  验证码嵌入显示
+        }
+    }
 }
 ```
 
@@ -120,11 +218,30 @@ example2:
 	});
 </script>
 ```
+example3:
 
+```html
+<!-- jQuery 写法-->
+<div id="target2"></div>
+<!--以下隐藏域为示例代码，开发者自行选择将这3个属性传输到后台的方式-->
+<input id="token" type="hidden"/>
+<input id="checkAddress" type="hidden"/>
+<input id="sid" type="hidden"/>
+
+<script type="text/javascript">
+	var tc = new TouClick($('#target2')[0],{
+		onSuccess: function( obj){
+			$('#token').val(obj.token);
+			$('#checkAddress').val(obj.checkAddress);
+			$('#sid').val(obj.sid);
+		}
+	});
+</script>
+```
 ##对象方法:
 
 ```javascript
-/* 
+/*
  * 销毁验证码实例并且从页面中移除验证码相关html
  * @return void
  */
@@ -135,6 +252,12 @@ destory
  * @return boolean
  */
 getStatus
+
+/*
+ * 设置遮罩层后点击遮罩层可实现关闭验证码。
+ * @return void
+ */
+close
 ```
 #######调用示例:
 
@@ -147,7 +270,10 @@ getStatus
 			document.getElementById('token') = obj.token;
 			document.getElementById('checkAddress') = obj.checkAddress;
 			document.getElementById('sid') = obj.sid;
-		}
+		},
+		onMaskClick:function(e){
+            tc.close();   //点击关闭验证码
+        },
 	});
 
 	document.getElementById('destory').onclick = function(){
@@ -165,7 +291,8 @@ getStatus
 </script>
 ```
 ## 联系我们：
-（商务洽谈）官Q1：3180210030 ，电话010-53608568
 
-（技术支持）官Q1：495067988  
+（客户服务）官Q1：<a href="http://sofar.touclick.com:3000/?service=0" target="_blank">3180210030</a> ，电话010-53608568
+
+（技术支持）官Q1：<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=eae024d881e951c69bb4bbb41d1af9be9f4b861eb86bf48e8f35cf27cc24d98e">495067988</a>
 
