@@ -136,7 +136,17 @@ var options = {
 		 *  return true;  设置遮罩层
 		 *  return false; 取消遮罩层
 		 *  默认 return false;
+		 *
+		 *  可以使用官方提供的 env 参数
+		 *  mob:屏幕宽度小于530
+		 *  pc: 屏幕宽度大于530
 		 */
+		if(env == "pc"){
+			return true;    //屏幕大于530px时 return true 或者 false 进行设置遮罩层设置
+        }else if(env=="mob"){
+            return true;    //屏幕小于530px时 return true 或者 false 进行设置遮罩层设置
+        }
+		
 	 },
 
 	 /*
@@ -169,9 +179,9 @@ var options = {
 		 *  pc: 屏幕宽度大于530
 		 */
         if(env == "pc"){
-            return true;   //屏幕宽度大于530px时  验证码屏幕居中显示
+            return true;   //屏幕宽度大于530px时  return true 或者 false 进行验证码显示位置设置
         }else if(env == "mob"){
-            return false;   //屏幕宽度小于530px时  验证码嵌入显示
+            return false;   //屏幕宽度小于530px时  return true 或者 false 进行验证码显示位置设置
         }
     }
 }
