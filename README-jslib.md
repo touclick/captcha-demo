@@ -76,6 +76,107 @@ var options = {
 	 */
 	behaviorDom: ''
 
+	/*
+	 * 验证失败以后的回调函数
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+	onFailure:function(){
+		/*
+		 * 验证码验证失败事件。
+		 * 可以写入验证失败后的提示信息，提高用户体验
+		 *
+		 */
+	},
+
+	/*
+	 * 关闭验证码事件
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+	onClose:function(){
+        /*
+		 * 点击关闭按钮关闭验证码事件
+		 *
+		 */
+    },
+
+    /*
+	 * 点击验证码图案事件
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+	onClick:function(){
+        /*
+		 * 验证码图案每一次点击的回调函数
+		 *
+		 */
+    },
+	
+	/*
+	 * 自定义点击图案
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+    hoverImg:"url",
+	
+	/*
+	 * 自定义验证失败后显示的图案
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 */
+    failureImg:"url",
+
+    /*
+	 * 设置验证码遮罩层
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 *
+	 */
+	 isOpenMask:function(env){
+		/*
+		 * 设置验证码的遮罩层
+		 *  return true;  设置遮罩层
+		 *  return false; 取消遮罩层
+		 *  默认 return false;
+		 *
+		 *  可以使用官方提供的 env 参数
+		 *  mob:屏幕宽度小于530
+		 *  pc: 屏幕宽度大于530
+		 */
+		if(env == "pc"){
+			return true;    //屏幕大于530px时 return true 或者 false 进行设置遮罩层设置
+        }else if(env=="mob"){
+            return true;    //屏幕小于530px时 return true 或者 false 进行设置遮罩层设置
+        }
+	 },
+
+	 /*
+	 * 点击遮罩层事件
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 *
+	 */
+	onMaskClick:function(e){
+		/*
+		 *  如果有遮罩，用户点击遮罩触发的事件
+		 *  建议用法：可以利用该事件 注册 关闭验证码的 动作
+		 */
+    },
+
+    /*
+	 * 设置验证码位置
+	 *
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 *
+	 */
+	isCaptchaFloat:function(env){
+		/*
+		 * 设置验证码的显示位置。
+		 * 建议用法：配合env参数使用。 
+		 *
+		 */
+    }
 }
 ```
 
@@ -120,6 +221,26 @@ example2:
 	});
 </script>
 ```
+example3:
+
+```html
+<!-- jQuery 写法-->
+<div id="target2"></div>
+<!--以下隐藏域为示例代码，开发者自行选择将这3个属性传输到后台的方式-->
+<input id="token" type="hidden"/>
+<input id="checkAddress" type="hidden"/>
+<input id="sid" type="hidden"/>
+
+<script type="text/javascript">
+	var tc = new TouClick($('#target2')[0],{
+		onSuccess: function( obj){
+			$('#token').val(obj.token);
+			$('#checkAddress').val(obj.checkAddress);
+			$('#sid').val(obj.sid);
+		}
+	});
+</script>
+```
 
 ##对象方法:
 
@@ -135,6 +256,12 @@ destory
  * @return boolean
  */
 getStatus
+
+/*
+ * 触发关闭验证码动作。
+ * @return void
+ */
+close
 ```
 #######调用示例:
 
@@ -147,7 +274,10 @@ getStatus
 			document.getElementById('token') = obj.token;
 			document.getElementById('checkAddress') = obj.checkAddress;
 			document.getElementById('sid') = obj.sid;
-		}
+		},
+		onMaskClick:function(e){
+            tc.close();   //点击关闭验证码
+        }
 	});
 
 	document.getElementById('destory').onclick = function(){
@@ -164,8 +294,9 @@ getStatus
 	}
 </script>
 ```
-## 联系我们：
-（商务洽谈）官Q1：3180210030 ，电话010-53608568
+### 联系我们：
 
-（技术支持）官Q1：495067988  
+（客户服务）官Q1：<a href="https://touclick.com/?service=0" target="_blank">800161394</a> ，电话010-53608568
+
+（技术支持）官Q1：<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=eae024d881e951c69bb4bbb41d1af9be9f4b861eb86bf48e8f35cf27cc24d98e">205658675</a>
 
