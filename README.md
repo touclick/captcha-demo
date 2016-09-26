@@ -34,15 +34,15 @@ README-jslib.md 是 JavaScript Lib 文档
 
 拖动拼合
 
-![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/drag-3.png)
+![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/ex-3.png)
 
 图标点击
 
-![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/block-14.png)
+![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/ex-14.png)
 
 图文点击
 
-![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/classical_13.png)
+![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/ex-13.png)
 
 
 ### 联系我们：
