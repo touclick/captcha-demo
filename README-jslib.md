@@ -194,9 +194,9 @@ example1:
 <script type="text/javascript">
 	var tc = new TouClick('target1',{
 		onSuccess: function( obj){
-			document.getElementById('token') = obj.token;
-			document.getElementById('checkAddress') = obj.checkAddress;
-			document.getElementById('sid') = obj.sid;
+			document.getElementById('token').value = obj.token;
+			document.getElementById('checkAddress').value = obj.checkAddress;
+			document.getElementById('sid').value = obj.sid;
 		}
 	});
 </script>
@@ -214,9 +214,9 @@ example2:
 <script type="text/javascript">
 	var tc = new TouClick(document.getElementById('target2'),{
 		onSuccess: function( obj){
-			document.getElementById('token') = obj.token;
-			document.getElementById('checkAddress') = obj.checkAddress;
-			document.getElementById('sid') = obj.sid;
+			document.getElementById('token').value = obj.token;
+			document.getElementById('checkAddress').value = obj.checkAddress;
+			document.getElementById('sid').value = obj.sid;
 		}
 	});
 </script>
@@ -271,9 +271,9 @@ close
 <script type="text/javascript">
 	var tc = new TouClick(document.getElementById('target2'),{
 		onSuccess: function( obj){
-			document.getElementById('token') = obj.token;
-			document.getElementById('checkAddress') = obj.checkAddress;
-			document.getElementById('sid') = obj.sid;
+			document.getElementById('token').value = obj.token;
+			document.getElementById('checkAddress').value = obj.checkAddress;
+			document.getElementById('sid').value = obj.sid;
 		},
 		onMaskClick:function(e){
             tc.close();   //点击关闭验证码
