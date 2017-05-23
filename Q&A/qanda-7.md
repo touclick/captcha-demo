@@ -53,51 +53,76 @@ demo:
         TouClick.ready(function(){
 
             var tc= TouClick('target1',{
+                // 检测表单是否填写完整
                 readyCheck:function(){
                     if(TouClick.$('input2').value==''){
-                        return {status:false,msg:'dfasd'}
+                        return {status:false,msg:'表单未填写完整的提示信息'}
                     }
-                    return {status:true,checkCode:''}
+                    return {status:true,ckCode:''}
                 },
+
+                //验证成功后的回调函数
                 onSuccess:function(obj){
-                    TouClick.console("onclck",1);
-                    // console.log(obj)
-                    // console.log( tc.getStatus());
+                    console.log("success");
                 },
+
+                //验证失败后的回调函数
                 onFailure:function(){
-                    TouClick.console('onFailure',1);
-                    // console.log("on failure")
+
+                    console.log("failure")
                 },
+
+                //手动关闭验证码的回调函数
                 onClose:function(){
-                    TouClick.console('onClose',1);
-                    // console.log('on close')
+
+                    console.log('close')
                 },
+
+                //点击验证码的回调函数
                 onClick:function(){
-                    TouClick.console("onclck",1);
-                    // console.log("on click")
+
+                    console.log("click")
                 },
+
+                //用户行为监控
                 behaviorDom:'input2',
+
+                //自定义点击验证码提示图案。
                 hoverImg:"../img/hov.png",
+
+                //自定义失败后显示的图案
                 failureImg:"../img/hov.png",
-                // successImg:"../img/hov.png",
+
+                //自定义成功后显示的图案
+                successImg:"../img/hov.png",
+                
+                /*
+                    设置遮罩层显示状态
+                    true:  显示
+                    false: 隐藏
+                 */
                 isOpenMask:function(env){
-                        return true;
                     if(env == "pc"){
+                        return true;
                     }else if(env=="mob"){
                         return true;
                     }
                 },
+
+                /*
+                    点击遮罩层效果
+                 */
                 onMaskClick:function(e){
-                    // console.log(this);
                     tc.close();
-                    // console.log(e)
                 },
+
+                /*
+                 * 设置验证码位置
+                 */
                 isCaptchaFloat:function(env){
                     //true 浮动样式
                     //false 嵌入样式
-                    // return true;
-                    // return true;
-
+                    
                     if(env == "pc"){
                         return true;
                     }else if(env == "mob"){
@@ -105,9 +130,19 @@ demo:
                     }
                 }
             });
+            
+            /*
+                检测验证码是否验证成功
+                true: 成功
+                false: 失败
+             */
             TouClick.$('target2').onclick = function(){
-                console.log(tc.getStatus())    //检测是否验证码成功  [true || false]
-            }
+                console.log(tc.getStatus());    
+            };
+
+            /*
+                移除验证码插件
+             */
             TouClick.$('target3').onclick = function(){
                 tc.destory();
             }
