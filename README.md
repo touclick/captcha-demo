@@ -8,6 +8,8 @@
 [![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/GO4.png)](https://github.com/touclick/go-sdk)
 [![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/JS4.png)](https://github.com/touclick/nodejs-demo)
 [![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/csharp.png)](https://github.com/touclick/csharp-sdk)
+[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/android-icon-v2.png)](https://github.com/touclick/android-sdk)
+[![image](https://raw.githubusercontent.com/zyayhj/captcha-demo/image/images/ios-icon-v2.png)](https://github.com/touclick/ios-sdk)
 
 ### 适用情况
 
