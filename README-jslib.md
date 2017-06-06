@@ -11,7 +11,7 @@
 TouClick.ready(function(){}) 
 ```
 
-####### 调用实例:
+###### 调用实例:
 
 ```javascript
 TouClick.ready(function(){
@@ -34,7 +34,7 @@ TouClick.ready(function(){
 TouClick(dom, options) 
 ```
 
-####### OPTIONS
+###### OPTIONS
 
 ```javascript
 var options = {
@@ -176,13 +176,22 @@ var options = {
 		 * 建议用法：配合env参数使用。 
 		 *
 		 */
-    }
+    },
+
+    /*
+	 * 定义验证码显示语言
+	 * @param {String} language 默认中文 cn,官方提供英文参数 en
+	 * 
+	 * @非必须参数,具体使用可联系点触技术服务,底部有联系方式
+	 *
+	 */
+	language: "cn"
 }
 ```
 
-#######调用示例:
+###### 调用示例:
 
-example1:
+###### example1:
 
 ```html
 <div id="target1"></div>
@@ -202,7 +211,7 @@ example1:
 </script>
 ```
 
-example2:
+###### example2:
 
 ```html
 <div id="target2"></div>
@@ -221,7 +230,7 @@ example2:
 	});
 </script>
 ```
-example3:
+###### example3:
 
 ```html
 <!-- jQuery 写法-->
@@ -242,7 +251,7 @@ example3:
 </script>
 ```
 
-##对象方法:
+## 对象方法:
 
 ```javascript
 /* 
@@ -263,7 +272,7 @@ getStatus
  */
 close
 ```
-#######调用示例:
+###### 调用示例:
 
 ```html
 <button id="destory"></button>
