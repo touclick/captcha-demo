@@ -1,8 +1,10 @@
 { 
-  "php-sdk" : "//captcha-static.touclick.com/download/20160920172751/php-sdk-5.2.0.tar.gz",
-  "csharp-sdk" : "//captcha-static.touclick.com/download/20160920172751/csharp-sdk-5.2.0.tar.gz",
-  "go-sdk" : "//captcha-static.touclick.com/download/20160920172751/go-sdk-5.2.0.tar.gz",
-  "nodejs-demo" : "//captcha-static.touclick.com/download/20160920172751/nodejs-demo-5.2.0.tar.gz",
-  "python-sdk" : "//captcha-static.touclick.com/download/20160920172751/python-sdk-5.2.0.tar.gz",
-  "java-sdk" : "//captcha-static.touclick.com/download/20160920172751/java-sdk-5.2.0.tar.gz"
+  "php-sdk" : "//captcha-static.touclick.com/download/20170606112420/php-sdk-5.2.0.tar.gz",
+  "csharp-sdk" : "//captcha-static.touclick.com/download/20170606112420/csharp-sdk-5.2.0.tar.gz",
+  "go-sdk" : "//captcha-static.touclick.com/download/20170606112420/go-sdk-5.2.0.tar.gz",
+  "nodejs-demo" : "//captcha-static.touclick.com/download/20170606112420/nodejs-demo-5.2.0.tar.gz",
+  "python-sdk" : "//captcha-static.touclick.com/download/20170606112420/python-sdk-5.2.0.tar.gz",
+  "java-sdk" : "//captcha-static.touclick.com/download/20170606112420/java-sdk-5.2.0.tar.gz",
+  "android-sdk" : "//captcha-static.touclick.com/download/20170606112420/android-sdk-5.2.0.tar.gz",
+  "ios-sdk" : "//captcha-static.touclick.com/download/20170606112420/ios-sdk-5.2.0.tar.gz"
  } 
